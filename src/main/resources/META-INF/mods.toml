@@ -27,12 +27,12 @@ displayName="BMVSB" #mandatory
 # A URL for the "homepage" for this mod, displayed in the mod UI
 #displayURL="https://change.me.to.your.mods.homepage.example.invalid/" #optional
 # A file name (in the root of the mod JAR) containing a logo for display
-logoFile="bmvsb.png" #optional
+logoFile="logo.png" #optional
 # A text field displayed in the mod UI
 authors="LimeShulkerBox" #optional
 # The description text for the mod (multi line!) (#mandatory)
 description='''
-Removes magnesiums annoyances with their stupid video settings menu'''
+Removes Magnesiums annoyances with their stupid video settings menu'''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 [[dependencies.bmvsb]] #optional
     # the modid of the dependency
@@ -50,11 +50,11 @@ Removes magnesiums annoyances with their stupid video settings menu'''
     modId="minecraft"
     mandatory=true
 # This version range declares a minimum of the current minecraft version up to but not including the next major version
-    versionRange="[1.16.5,1.17)"
+    versionRange="[1.18]"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.bmvsb]]
     modId="magnesium"
     mandatory=true
-    versionRange="[1.0, )"
+    versionRange="[0, )"

@@ -1,11 +1,11 @@
 {
   "required": true,
-  "package": "com.limeshulkerbox.bmvsb.mixins",
-  "refmap": "mixins.bmvsb.refmap.json",
+  "package": "com.limeshulkerbox.bmvsb.mixin",
+  "refmap": "mixin.bmvsb.refmap.json",
   "compatibilityLevel": "JAVA_8",
   "client": [
-    "VideoOptionsScreenMixin",
-    "OptionsScreenMixin"
+    "MixinVideoOptionsScreen",
+    "MixinOptionsScreen"
   ],
   "injectors": {
     "maxShiftBy": 3,
