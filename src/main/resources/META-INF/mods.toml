@@ -53,8 +53,3 @@ Removes Magnesiums annoyances with their stupid video settings menu'''
     versionRange="[1.18]"
     ordering="NONE"
     side="BOTH"
-
-[[dependencies.bmvsb]]
-    modId="magnesium"
-    mandatory=true
-    versionRange="[0, )"

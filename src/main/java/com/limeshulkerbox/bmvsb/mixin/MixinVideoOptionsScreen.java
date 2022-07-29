@@ -36,13 +36,15 @@ public abstract class MixinVideoOptionsScreen extends Screen {
 
     @Inject(method = "init", at = @At("HEAD"))
     void mixinInit(CallbackInfo callbackInfo) {
-        this.addRenderableWidget(new Button(this.width / 2 + 5, this.height - 27, 150, 20, new TranslatableComponent("text.bmvsb.magnesiumvideosettings"), (button) -> {
-            if (ModList.get().isLoaded("reeses-sodium-options")) {
-                flashyReesesOptionsScreen();
-            } else {
-                sodiumVideoOptionsScreen();
-            }
-        }));
+        if (ModList.get().isLoaded("magnesium") || ModList.get().isLoaded("rubidium")) {
+            this.addRenderableWidget(new Button(this.width / 2 + 5, this.height - 27, 150, 20, new TranslatableComponent("text.bmvsb.magnesiumvideosettings"), (button) -> {
+                if (ModList.get().isLoaded("reeses-sodium-options")) {
+                    flashyReesesOptionsScreen();
+                } else {
+                    sodiumVideoOptionsScreen();
+                }
+            }));
+        }
     }
 
     @Unique
@@ -81,11 +83,17 @@ public abstract class MixinVideoOptionsScreen extends Screen {
 
     @ModifyConstant(method = "init", constant = @Constant(intValue = 100, ordinal = 0))
     private int modifyDonePos(int input) {
-        return 155;
+        if (ModList.get().isLoaded("magnesium") || ModList.get().isLoaded("rubidium")) {
+            return 155;
+        }
+        return input;
     }
 
     @ModifyConstant(method = "init", constant = @Constant(intValue = 200, ordinal = 0))
     private int modifyDoneWidth(int input) {
-        return 150;
+        if (ModList.get().isLoaded("magnesium") || ModList.get().isLoaded("rubidium")) {
+            return 150;
+        }
+        return input;
     }
 }

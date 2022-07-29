@@ -1,7 +1,7 @@
 {
   "required": true,
   "package": "com.limeshulkerbox.bmvsb.mixin",
-  "refmap": "mixin.bmvsb.refmap.json",
+  "refmap": "bmvsb.refmap.json",
   "compatibilityLevel": "JAVA_8",
   "client": [
     "MixinVideoOptionsScreen",
